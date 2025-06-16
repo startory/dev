@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startory - Ship Your MVP in 14 Days</title>
+    <meta name="description" content="Turn your idea into a market-ready MVP with beautiful design and powerful functionality." />
+    <meta name="author" content="Startory" />
+
+    <meta property="og:title" content="Startory - Ship Your MVP in 14 Days" />
+    <meta property="og:description" content="Turn your idea into a market-ready MVP with beautiful design and powerful functionality." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+        33% { transform: translate(30px, -30px) rotate(120deg); }
+        66% { transform: translate(-20px, 20px) rotate(240deg); }
+      }
+      
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(0, 230, 254, 0.3); }
+        50% { box-shadow: 0 0 40px rgba(0, 230, 254, 0.6); }
+      }
+      
+      .particle {
+        position: absolute;
+        background: linear-gradient(45deg, #00E6FE, #A3FF12);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: float 20s infinite linear;
+      }
+      
+      .particle:nth-child(1) { width: 4px; height: 4px; top: 20%; left: 20%; animation-delay: -2s; }
+      .particle:nth-child(2) { width: 6px; height: 6px; top: 60%; left: 80%; animation-delay: -8s; }
+      .particle:nth-child(3) { width: 3px; height: 3px; top: 40%; left: 40%; animation-delay: -15s; }
+      .particle:nth-child(4) { width: 5px; height: 5px; top: 80%; left: 10%; animation-delay: -5s; }
+      .particle:nth-child(5) { width: 2px; height: 2px; top: 10%; left: 90%; animation-delay: -12s; }
+      .particle:nth-child(6) { width: 4px; height: 4px; top: 70%; left: 60%; animation-delay: -18s; }
+      
+      .glow-button {
+        animation: pulse-glow 2s infinite;
+      }
+      
+      .project-image {
+        background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        border: 1px solid #4b5563;
+      }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%2300E6FE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M13 10V3L4 14h7v7l9-11h-7z'/%3E%3C/svg%3E">
+  </head>
+
+  <body class="bg-[#0F0F11] text-white overflow-x-hidden">
+    <!-- Floating particles -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-[#0F0F11]/90 backdrop-blur-md border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <svg class="h-8 w-8 text-[#00E6FE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span class="ml-2 text-xl font-bold">Startory</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
+              <a href="#process" class="text-gray-300 hover:text-white transition-colors">Process</a>
+              <a href="#work" class="text-gray-300 hover:text-white transition-colors">Our Work</a>
+              <a href="#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+              <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
+              <button class="bg-[#00E6FE] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#00D4E6] transition-colors glow-button">
+                <a href="https://cal.com/turn-speaker-8qe7rd/30min" target="_blank">Start Your Project</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center relative z-10">
+        <div class="flex justify-center">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 flex items-center">
+            <svg class="inline-block h-12 w-12 md:h-16 md:w-16 text-[#00E6FE] mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            Ship Your 
+            <span id="switch-word" class="mx-2 bg-clip-text text-transparent bg-gradient-to-r from-[#00E6FE] to-[#8B5CF6] transition-opacity duration-500 ease-in-out">
+              MVP
+            </span>
+             in 14 Days
+          </h1>
+        </div>
+
+        <!-- Trusted by section -->
+        
+
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-300">
+          Build. Launch. Validate.
+        </h2>
+        <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+          Turn your idea into a market-ready MVP with beautiful design and powerful functionality.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <button class="bg-[#00E6FE] text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#00D4E6] transition-colors glow-button">
+            <a href="https://cal.com/turn-speaker-8qe7rd/30min" target="_blank">Start Your Project</a>
+          </button>
+          <a href="#work">
+          <button class="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-500 transition-colors">
+             View Our Work
+          </button>
+        </a>
+
+        </div>
+        <div class="flex flex-col items-center mb-8">
+          <div class="text-lg font-semibold mb-2">
+            Trusted by <span class="text-[#00E6FE] font-bold">70+</span> <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#00E6FE] to-[#8B5CF6] font-bold">entrepreneurs</span>
+          </div>
+          <div class="flex -space-x-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user1">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user2">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user3">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user4">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user5">
+            <img src="https://randomuser.me/api/portraits/women/21.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user6">
+            <img src="https://randomuser.me/api/portraits/men/41.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user7">
+            <img src="https://randomuser.me/api/portraits/women/55.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="user8">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="flex items-center justify-center">
+            <svg class="h-6 w-6 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-lg">Landing Pages – 2 Days</span>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg class="h-6 w-6 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-lg">Full MVP – 14 Days</span>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg class="h-6 w-6 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-lg">100% Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-16">What We Craft</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <svg class="h-12 w-12 text-[#00E6FE] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-4">Landing Pages</h3>
+            <p class="text-gray-400 mb-6">High-converting pages that capture leads and showcase your product.</p>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>• Responsive design</li>
+              <li>• SEO optimized</li>
+              <li>• Analytics setup</li>
+              <li>• Lead capture forms</li>
+            </ul>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <svg class="h-12 w-12 text-[#00E6FE] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-4">MVP Development</h3>
+            <p class="text-gray-400 mb-6">Full-featured applications ready for user testing and validation.</p>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>• User authentication</li>
+              <li>• Database integration</li>
+              <li>• Payment processing</li>
+              <li>• Admin dashboard</li>
+            </ul>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <svg class="h-12 w-12 text-[#00E6FE] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-4">Product Launch</h3>
+            <p class="text-gray-400 mb-6">Complete launch strategy including deployment and marketing setup.</p>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>• Production deployment</li>
+              <li>• Domain & SSL setup</li>
+              <li>• Analytics tracking</li>
+              <li>• Launch checklist</li>
+            </ul>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <svg class="h-12 w-12 text-[#00E6FE] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-4">Continuous Development</h3>
+            <p class="text-gray-400 mb-6">Ongoing feature development and maintenance for growing products.</p>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li>• Feature updates</li>
+              <li>• Bug fixes</li>
+              <li>• Performance optimization</li>
+              <li>• Security updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-16">Our Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="bg-[#00E6FE] text-black w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+            <h3 class="text-xl font-semibold mb-2">Discovery Call</h3>
+            <p class="text-gray-400 mb-4">We understand your vision, goals, and technical requirements.</p>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">1 day</span>
+          </div>
+          <div class="text-center">
+            <div class="bg-[#00E6FE] text-black w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+            <h3 class="text-xl font-semibold mb-2">Design & Planning</h3>
+            <p class="text-gray-400 mb-4">Create wireframes, design system, and technical architecture.</p>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">2-3 days</span>
+          </div>
+          <div class="text-center">
+            <div class="bg-[#00E6FE] text-black w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+            <h3 class="text-xl font-semibold mb-2">Development</h3>
+            <p class="text-gray-400 mb-4">Build your MVP with clean code and modern best practices.</p>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">7-10 days</span>
+          </div>
+          <div class="text-center">
+            <div class="bg-[#00E6FE] text-black w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+            <h3 class="text-xl font-semibold mb-2">Launch & Support</h3>
+            <p class="text-gray-400 mb-4">Deploy to production and provide ongoing support.</p>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">1-2 days</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-16">Our Work</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <div class="project-image w-full h-48 rounded-lg mb-6 flex items-center justify-center">
+              <img src="imgs/devmatch.png" alt="DevMatch Project" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">DevMatch</h3>
+              <span class="bg-[#00E6FE] text-black px-3 py-1 rounded-full text-sm font-semibold">MVP • 12 days</span>
+            </div>
+            <p class="text-gray-400 mb-6">Platform for developers to find each other</p>
+            <ul class="space-y-2 text-sm text-gray-300 mb-6">
+              <li>• Authentication system</li>
+              <li>• Database</li>
+              <li>• Tinder-like discovery</li>
+              <li>• Profile</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Python</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Flask</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">TailwindCSS</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Firebase</span>
+            </div>
+            <div class="mt-auto pt-4">
+              <button onclick="openImageGallery('devmatch')" class="text-gray-400 text-sm hover:text-white transition-colors">
+                View Images
+              </button>
+            </div>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <div class="project-image w-full h-48 rounded-lg mb-6 flex items-center justify-center">
+              <img src="imgs/canalyze.png" alt="Canalyze Project" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">Canalyze</h3>
+              <span class="bg-[#00E6FE] text-black px-3 py-1 rounded-full text-sm font-semibold">MVP • 14 days</span>
+            </div>
+            <p class="text-gray-400 mb-6">AI-powered cancer prediction tool designed to assist healthcare professionals. Discontinued due to ethical concerns.</p>
+            <ul class="space-y-2 text-sm text-gray-300 mb-6">
+              <li>• Machine learning predictions</li>
+              <li>• Patient data analysis</li>
+              <li>• Risk scoring system</li>
+              <li>• Medical dataset integration</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Python</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Flask</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Pandas</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Scikit-learn</span>
+            </div>
+            <div class="mt-auto pt-4">
+              <button onclick="openImageGallery('canalyze')" class="text-gray-400 text-sm hover:text-white transition-colors">
+                View Images
+              </button>
+            </div>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl hover:bg-gray-800 transition-colors">
+            <div class="project-image w-full h-48 rounded-lg mb-6 flex items-center justify-center">
+              <img src="imgs/notefy.png" alt="Notefy Project" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold">Notefy</h3>
+              <span class="bg-[#00E6FE] text-black px-3 py-1 rounded-full text-sm font-semibold">MVP • 10 days</span>
+            </div>
+            <p class="text-gray-400 mb-6">AI-powered platform that turns meetings into structured, shareable notes. Built for teams, founders, and busy professionals.</p>
+            <ul class="space-y-2 text-sm text-gray-300 mb-6">
+              <li>• Automatic meeting transcription</li>
+              <li>• AI-generated summaries & action items</li>
+              <li>• Upload recordings or connect live</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Flask</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">Whisper API</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">OpenAI</span>
+              <span class="bg-gray-800 px-2 py-1 rounded text-xs">TailwindCSS</span>
+            </div>
+            <br>
+            <a href="https://notefy.pythonanywhere.com" target="_blank" class="inline-block bg-[#00E6FE] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#00D4E6] transition-colors">
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-gray-900/50 p-8 rounded-xl border-2 border-dashed border-gray-700">
+            <div class="text-center text-gray-500">
+              <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Coming Soon</h3>
+              <p class="text-sm">New project in development</p>
+            </div>
+          </div>
+          <div class="bg-gray-900/50 p-8 rounded-xl border-2 border-dashed border-gray-700">
+            <div class="text-center text-gray-500">
+              <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Coming Soon</h3>
+              <p class="text-sm">New project in development</p>
+            </div>
+          </div>
+          <div class="bg-gray-900/50 p-8 rounded-xl border-2 border-dashed border-gray-700">
+            <div class="text-center text-gray-500">
+              <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Coming Soon</h3>
+              <p class="text-sm">New project in development</p>
+            </div>
+          </div>
+          <div class="bg-gray-900/50 p-8 rounded-xl border-2 border-dashed border-gray-700">
+            <div class="text-center text-gray-500">
+              <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Coming Soon</h3>
+              <p class="text-sm">New project in development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-16">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-gray-900 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold mb-4">Landing Page</h3>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">$99</span>
+              <span class="text-gray-400 line-through ml-2">$299</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Responsive design
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                SEO optimization
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Contact forms
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                2-day delivery
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                1 revision round
+              </li>
+            </ul>
+            <button class="w-full border border-gray-600 text-white py-3 rounded-lg font-semibold hover:border-gray-500 transition-colors">
+              <a href="https://cal.com/turn-speaker-8qe7rd/30min" target="_blank">Get Started</a>
+            </button>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl border-2 border-[#00E6FE] relative">
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="bg-[#00E6FE] text-black px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Standard MVP</h3>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">$999</span>
+              <span class="text-gray-400 line-through ml-2">$2999</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Full web application
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                User authentication
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Database integration
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Admin dashboard
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                14-day delivery
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                2 revision rounds
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                30 days support
+              </li>
+            </ul>
+            <button class="w-full bg-[#00E6FE] text-black py-3 rounded-lg font-semibold hover:bg-[#00D4E6] transition-colors glow-button">
+              <a href="https://cal.com/turn-speaker-8qe7rd/30min" target="_blank">Get Started</a>
+            </button>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold mb-4">Continuous Dev</h3>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">$499</span>
+              <span class="text-gray-400">/mo</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Ongoing development
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Feature updates
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Bug fixes
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Performance optimization
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Priority support
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-[#00E6FE] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Cancel anytime
+              </li>
+            </ul>
+            <button class="w-full border border-gray-600 text-white py-3 rounded-lg font-semibold hover:border-gray-500 transition-colors">
+              <a href="https://cal.com/turn-speaker-8qe7rd/30min" target="_blank">Get Started</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <div class="max-w-4xl mx-auto relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-16">FAQ</h2>
+        <div class="space-y-4">
+          <div class="bg-gray-900 rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-800 transition-colors" data-target="faq-0">
+              <span class="text-xl font-semibold">What tech do you use?</span>
+              <svg class="h-6 w-6 transition-transform faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-0" class="faq-content hidden">
+              <div class="px-6 pb-6">
+                <p class="text-gray-400">We use modern, battle-tested technologies including React, Next.js, Node.js, PostgreSQL, and deploy on Vercel/AWS. We choose the best tools for your specific needs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-900 rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-800 transition-colors" data-target="faq-1">
+              <span class="text-xl font-semibold">Do you provide hosting?</span>
+              <svg class="h-6 w-6 transition-transform faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-1" class="faq-content hidden">
+              <div class="px-6 pb-6">
+                <p class="text-gray-400">Yes! We handle everything from development to deployment. Your MVP will be hosted on reliable cloud infrastructure with SSL certificates and monitoring included.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-900 rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-800 transition-colors" data-target="faq-2">
+              <span class="text-xl font-semibold">Can I request changes?</span>
+              <svg class="h-6 w-6 transition-transform faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-2" class="faq-content hidden">
+              <div class="px-6 pb-6">
+                <p class="text-gray-400">Absolutely! We include 2 rounds of revisions in all packages. Additional changes can be made for a small fee. Your satisfaction is our priority.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-900 rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-800 transition-colors" data-target="faq-3">
+              <span class="text-xl font-semibold">What if I'm not satisfied?</span>
+              <svg class="h-6 w-6 transition-transform faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-3" class="faq-content hidden">
+              <div class="px-6 pb-6">
+                <p class="text-gray-400">We offer a 100% satisfaction guarantee. If you're not happy with the initial delivery, we'll work with you until you are, or provide a full refund.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-900 rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-800 transition-colors" data-target="faq-4">
+              <span class="text-xl font-semibold">Post-launch support?</span>
+              <svg class="h-6 w-6 transition-transform faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="faq-4" class="faq-content hidden">
+              <div class="px-6 pb-6">
+                <p class="text-gray-400">We provide 30 days of free support after launch. For ongoing maintenance and feature development, check out our Continuous Development package.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center mb-6 md:mb-0">
+            <svg class="h-8 w-8 text-[#00E6FE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span class="ml-2 text-xl font-bold">Startory</span>
+            <span class="ml-4 text-gray-400">— Rapid MVPs for startups.</span>
+          </div>
+          <div class="flex items-center space-x-8">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            <button class="bg-[#00E6FE] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#00D4E6] transition-colors glow-button">
+              <a href="https://cal.com/turn-speaker-8qe7rd/30min" target="_blank">Schedule Free Call</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for FAQ functionality -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+          toggle.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const content = document.getElementById(targetId);
+            const chevron = this.querySelector('.faq-chevron');
+            
+            // Close all other FAQ items
+            faqToggles.forEach(otherToggle => {
+              if (otherToggle !== toggle) {
+                const otherTargetId = otherToggle.getAttribute('data-target');
+                const otherContent = document.getElementById(otherTargetId);
+                const otherChevron = otherToggle.querySelector('.faq-chevron');
+                
+                otherContent.classList.add('hidden');
+                otherChevron.classList.remove('rotate-180');
+              }
+            });
+            
+            // Toggle current FAQ item
+            if (content.classList.contains('hidden')) {
+              content.classList.remove('hidden');
+              chevron.classList.add('rotate-180');
+            } else {
+              content.classList.add('hidden');
+              chevron.classList.remove('rotate-180');
+            }
+          });
+        });
+
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- Image Gallery Modal -->
+    <div id="imageGalleryModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden">
+      <div class="absolute top-4 right-4">
+        <button onclick="closeImageGallery()" class="text-white hover:text-gray-300">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="flex items-center justify-center h-full">
+        <button onclick="prevImage()" class="absolute left-4 text-white hover:text-gray-300 z-10">
+          <svg class="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <div class="w-[90vw] h-[90vh] px-20">
+          <div id="galleryImages" class="relative w-full h-full flex items-center justify-center">
+            <!-- Current image will be shown here -->
+          </div>
+        </div>
+        <button onclick="nextImage()" class="absolute right-4 text-white hover:text-gray-300 z-10">
+          <svg class="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+    let currentImageIndex = 0;
+    let currentImages = [];
+
+    function openImageGallery(project) {
+      const modal = document.getElementById('imageGalleryModal');
+      const gallery = document.getElementById('galleryImages');
+      gallery.innerHTML = '';
+      
+      if (project === 'devmatch') {
+        currentImages = ['devmatch.png', 'devmatch_2.png', 'devmatch_3.png', 'devmatch_4.png', 'devmatch_5.png'];
+      } else if (project === 'canalyze') {
+        currentImages = ['canalyze.png', 'canalyze_2.png', 'canalyze_3.png', 'canalyze_4.png'];
+      }
+      
+      currentImageIndex = 0;
+      showCurrentImage();
+      
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showCurrentImage() {
+      const gallery = document.getElementById('galleryImages');
+      gallery.innerHTML = `
+        <img src="imgs/${currentImages[currentImageIndex]}" alt="Project screenshot" class="max-w-full max-h-full object-contain rounded-lg">
+      `;
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+      showCurrentImage();
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+      showCurrentImage();
+    }
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (document.getElementById('imageGalleryModal').classList.contains('hidden')) return;
+      
+      if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      } else if (e.key === 'Escape') {
+        closeImageGallery();
+      }
+    });
+
+    function closeImageGallery() {
+      const modal = document.getElementById('imageGalleryModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      currentImages = [];
+      currentImageIndex = 0;
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('imageGalleryModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeImageGallery();
+      }
+    });
+    </script>
+  </body>
+</html>
